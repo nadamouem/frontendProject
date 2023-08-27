@@ -9,7 +9,7 @@ export class ServiceService {
 
   constructor(private http:HttpClient) { }
 
-  public getProducts(){
+  public getData(){
   this.http
   .get('https://www.exchangerate-api.com/docs/standard-requests')
   .subscribe((respone)=>console.log(respone));

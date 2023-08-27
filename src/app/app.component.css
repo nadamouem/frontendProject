@@ -1,0 +1,10 @@
+.l-container {
+  width: 400px;
+  padding: 1rem;
+  background-color: blueviolet;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+}

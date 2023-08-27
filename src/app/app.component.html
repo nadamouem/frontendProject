@@ -1,8 +1,17 @@
-<div>
- <!-- <select name="drop-down" id="drop-down">
-  <option value="eg">EGP</option>
-  <option value="Dollar">Dollar</option>
-  <option value="inr">INR</option> -->
+<!-- <app-favourits></app-favourits> -->
+<!-- <app-button></app-button> -->
 
- <!-- </select> -->
+<button (click)="showFav = true">jjjj</button>
+
+<div class="l-container">
+    <app-rate-card *ngFor="let card of staticCardsList" [cardData]="card">
+        123
+      </app-rate-card>
 </div>
+
+<app-favourits
+  *ngIf="showFav"
+  [cardsList]="staticCardsList"
+  (closeFav)="showFav = $event"
+  (favItemChanges)="testFavChanges($event)"
+></app-favourits>
