@@ -9,6 +9,7 @@ import{ServiceService} from  '../../shared/service.service'
 
 export class PortofolioComponent implements OnInit {
 @Input() favCarrency:CurrencyFlag[]=[];
+showFav = false;
   
   constructor( ) {}
 

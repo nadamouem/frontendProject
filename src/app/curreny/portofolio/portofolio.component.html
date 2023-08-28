@@ -1,34 +1,56 @@
 <div class="main-container">
-   
-    <h1>live exchange rates</h1>
 
-    <div class="parent">
-        
-<div class="portofoilo-right">
+    <div class="header">
+        <h1 class="title">Live exchange rates</h1>
 
-    <h2>My portofoilo</h2>    
-            
-    <div class="contanier">
-
+        <button type="button" class="btn-fav" (click)="showFav=true">
+            <img src="../assets/images/plus 1.png"/>
+            <span class="btn-text">add to favourits</span>
+          </button>
+    </div>
+    <div class="body">
         <div class="item" *ngFor="let card of favCarrency">
             <div class="LEFT">
-                <div class="img-country-currency">
-
-                    <img [src]="card.flag" >
-                    <div class="img-country">
-                        <p class="country">{{card.currency}}</p><br/>
-                    <p class="currency"> CURRENCY</p>
-                    </div>
-
+              <div class="img-country-currency">
+                <img [src]="card.flag" />
+                <div class="img-country">
+                  <p class="country">{{ card.currency }}</p>
+                  <br />
+                  <p class="currency">CURRENCY</p>
                 </div>
+              </div>
             </div>
             <div class="Right">
-                <p class >2.5</p>
+              <p class>2.5</p>
             </div>
-            
-        </div>  
-</div>
-        
-</div>
+          </div>
+    </div>
 
+
+
+ 
+
+  <!-- <div class="container">
+    <div class="portofoilo-right">
+      <h2>My portofoilo</h2>
+
+      <div class="currency-dashboard">
+        <div class="item" *ngFor="let card of favCarrency">
+          <div class="LEFT">
+            <div class="img-country-currency">
+              <img [src]="card.flag" />
+              <div class="img-country">
+                <p class="country">{{ card.currency }}</p>
+                <br />
+                <p class="currency">CURRENCY</p>
+              </div>
+            </div>
+          </div>
+          <div class="Right">
+            <p class>2.5</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
 </div>
