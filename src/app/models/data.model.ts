@@ -5,3 +5,9 @@ export interface CurrencyCardModel {
   rate: number;
   checked: boolean;
 }
+
+export interface CurrencyFlag {
+  currency: string;
+  flag: string;
+  checked: boolean;
+}

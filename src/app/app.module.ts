@@ -5,12 +5,13 @@ import { AppComponent } from './app.component';
 import { FavouritsComponent } from './favourits/favourits.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RateCardComponent } from './shared/rate-card/rate-card.component';
-// import { ComponentComponent } from './component/component.component';
+import { PortofolioComponent } from './curreny/portofolio/portofolio.component';
+
 
 @NgModule({
-  declarations: [AppComponent, RateCardComponent, FavouritsComponent, ],
+  declarations: [AppComponent, RateCardComponent, FavouritsComponent, PortofolioComponent],
   imports: [BrowserModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule{}

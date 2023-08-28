@@ -1,0 +1,34 @@
+<div class="main-container">
+   
+    <h1>live exchange rates</h1>
+
+    <div class="parent">
+        
+<div class="portofoilo-right">
+
+    <h2>My portofoilo</h2>    
+            
+    <div class="contanier">
+
+        <div class="item" *ngFor="let card of favCarrency">
+            <div class="LEFT">
+                <div class="img-country-currency">
+
+                    <img [src]="card.flag" >
+                    <div class="img-country">
+                        <p class="country">{{card.currency}}</p><br/>
+                    <p class="currency"> CURRENCY</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="Right">
+                <p class >2.5</p>
+            </div>
+            
+        </div>  
+</div>
+        
+</div>
+
+</div>

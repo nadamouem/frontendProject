@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { CurrencyCardModel } from 'src/app/models/data.model';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CurrencyCardModel, CurrencyFlag } from 'src/app/models/data.model';
 
 @Component({
   selector: 'app-rate-card',
@@ -7,5 +7,8 @@ import { CurrencyCardModel } from 'src/app/models/data.model';
   styleUrls: ['./rate-card.component.css'],
 })
 export class RateCardComponent {
-  @Input() cardData!: CurrencyCardModel
+  @Input() cardData!: CurrencyFlag;
+  
+
 }
+

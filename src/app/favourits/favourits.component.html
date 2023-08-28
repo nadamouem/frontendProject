@@ -10,7 +10,7 @@
     <app-rate-card *ngFor="let card of cardsList" [cardData]="card">
       <input
         type="checkbox"
-        (change)="toggleFav(card)"
+        (change)="toggleFav(card,cardsList)" 
         [checked]="card.checked"
       />
     </app-rate-card>

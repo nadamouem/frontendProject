@@ -1,17 +1,29 @@
 import { Injectable } from '@angular/core';
 import{ HttpClient} from '@angular/common/http';
+import { CurrencyFlag } from '../models/data.model';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
-
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+    this.updateCurrenciesFromLocalStorage();
+  }
 
   public getData(){
-  this.http
-  .get('https://www.exchangerate-api.com/docs/standard-requests')
-  .subscribe((respone)=>console.log(respone));
+ return this.http
+  .get<CurrencyFlag[]>('https://currencyexchange-wbtr.onrender.com/images')
+  
 }
+private currenciesSubject = new BehaviorSubject<CurrencyFlag[]>([]);
+  currencies$: Observable<CurrencyFlag[]> = this.currenciesSubject.asObservable();
+
+
+
+  updateCurrenciesFromLocalStorage() {
+    const currencies = JSON.parse(localStorage.getItem('currencies') || '[]');
+    this.currenciesSubject.next(currencies);
+  }
 }

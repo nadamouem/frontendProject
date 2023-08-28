@@ -1,17 +1,22 @@
 <!-- <app-favourits></app-favourits> -->
 <!-- <app-button></app-button> -->
 
-<button (click)="showFav = true">jjjj</button>
+<button type="button" class="btn" (click)="showFav=true">
 
-<div class="l-container">
+  <img src="../assets/images/plus 1.png"/>
+  <span class="btn-text">add to favourits</span>
+</button>
+
+<!-- <div class="l-container">
     <app-rate-card *ngFor="let card of staticCardsList" [cardData]="card">
         123
       </app-rate-card>
-</div>
+</div> -->
+<app-portofolio [favCarrency]="Currencies"></app-portofolio>
 
 <app-favourits
   *ngIf="showFav"
-  [cardsList]="staticCardsList"
-  (closeFav)="showFav = $event"
-  (favItemChanges)="testFavChanges($event)"
+  [cardsList]="cardsList"
+  (closeFav)="showFav=$event"
+  (checkedItemChanges)="testFavChanges($event)"
 ></app-favourits>
