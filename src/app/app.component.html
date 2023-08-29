@@ -1,2 +1,17 @@
 <app-comparing></app-comparing>
 <!-- hghh -->
+<button type="button" class="btn" (click)="showFav=true"> 
+
+    <img src="../assets/images/plus 1.png"/>
+    <span class="btn-text">add to favourits</span>
+  </button> 
+  
+ 
+  <app-portofolio [favCarrency]="Currencies" ></app-portofolio>
+  
+  <app-favourits
+    *ngIf="showFav"
+    [cardsList]="cardsList"
+    (closeFav)="showFav=$event"
+    (checkedItemChanges)="testFavChanges($event)"
+  ></app-favourits>

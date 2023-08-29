@@ -1,0 +1,15 @@
+<div class="main-container">
+
+  <div class="header">
+    <h1 class="title">Live exchange rates</h1>
+  
+  </div>
+  <h3>My portofoilo</h3>
+  <div class="card-dashboard">
+    <app-rate-card *ngFor="let card of favCarrency" [cardData]="card">
+      <span>{{ card.currency | getRate | async | number:'1.0-2'}}</span>
+    </app-rate-card>
+
+  </div>
+
+</div>

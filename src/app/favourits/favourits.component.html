@@ -1,0 +1,18 @@
+<div class="fav-container flex-col">
+  <!-- close BTN -->
+  <button (click)="closeFav.emit(false)" class="close-btn">
+    <img src="assets/icon/x.svg" alt="close-btn-image" />
+  </button>
+  <!-- main title -->
+  <h3>My Favorites</h3>
+  <!-- cards list -->
+  <div class="list-container flex-col">
+    <app-rate-card *ngFor="let card of cardsList" [cardData]="card">
+      <input
+        type="checkbox"
+        (change)="toggleFav(card,cardsList)" 
+        [checked]="card.checked"
+      />
+    </app-rate-card>
+  </div>
+</div>

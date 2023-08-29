@@ -1,0 +1,123 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-container {
+  margin-block-start: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #FFF;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+h1 {
+  color: #202020;
+  font-family: Montserrat;
+  font-size: 32.5px;
+  font-style: normal;
+  font-weight: 600;
+  margin-inline-start: 40px;
+
+  /* line-height: normal; */
+}
+.btn-fav {
+  
+  display: flex;
+  width: 190px;
+  height: 52px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 18.926px;
+  flex-shrink: 0;
+  border-radius: 37.852px;
+  border: 1.893px solid #000;
+}
+.btn-text{
+  color: #363636;
+  font-size: 15px;
+}
+h3{
+color: var(--greyscale-grey-900, #121212);
+font-family: Poppins;
+font-size: 31.63px;
+font-style: normal;
+align-self: start;
+margin-inline-start: 89px;
+margin-block-start: 44px;
+
+}
+
+
+
+.card-dashboard {
+  width:100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  padding-top: 63px;
+  /* grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); */
+  height: 325px;
+  gap: 28.115px;
+}
+
+
+.img-country-currency img:nth-child(1) {
+  border-radius: 50%;
+}
+.img-country-currency {
+  display: flex;
+}
+.img-country {
+  column-gap: 0px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.country {
+  color: var(--greyscale-grey-900, #121212);
+  font-size: 24.601px;
+  /* line-height: 42.173px; 171.429% */
+}
+.currency {
+  color: var(--greyscale-grey-400, #b8b8b8);
+  font-size: 21.086px;
+  /* line-height: 35.144px; 166.667% */
+}
+.item .Right {
+  text-align: right;
+  /* width: 50%;  */
+  font-size: 20px;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    padding: 1em;
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+  }
+  .card-dashboard{
+    grid-template-columns: 1fr;
+  }
+}
