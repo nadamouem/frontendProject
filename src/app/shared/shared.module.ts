@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { ServiceService} from './service.service';
+import { AppComponent } from '../app.component';
+
 
 
 
@@ -12,7 +13,10 @@ import { ServiceService} from './service.service';
     CommonModule,
     RouterModule,
     HttpClientModule,
-    ServiceService,
-  ]
+    
+
+  ],
+  providers:[],
+  bootstrap:[AppComponent]
 })
 export class SharedModule { }
