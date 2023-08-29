@@ -1,0 +1,159 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.basecomponant {
+  background-image: url("../../assets/BGImage.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+}
+.topbotton{
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    border-radius:30px;
+    padding: 5px;
+    display: flex;
+    gap: 120px;
+
+  }
+  .basicflag{
+    width: 259.569px;
+height: 81.969px;
+flex-shrink: 0;
+border-radius: 34.154px;
+border: 0.854px solid #C5C5C5;
+background: #F9F9F9;
+background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  .basicflag.p-dropdown-trigger {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+
+.convertcomponant{
+display: flex;
+border-radius: 31.053px;
+background: #FFF;
+width: 500px;
+height: 550px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+width: 140px;
+height: 50px;
+
+}
+.convertword{
+    color: #141414;
+font-family: Poppins;
+font-size: 20.804px;
+font-style: normal;
+font-weight: 400;
+line-height: normal
+}
+.compareecomponant{
+display: flex;
+border-radius: 31.053px;
+background: #FFF;
+width: 500px;
+height: 550px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+width: 140px;
+height: 50px;
+}
+.compareword{
+    color: #141414;
+font-family: Poppins;
+font-size: 24.314px;
+font-style: normal;
+font-weight: 400;
+line-height: normal
+}
+
+.container {
+  background-color: #9d9d9d33;
+  backdrop-filter: blur(5.264404296875px);
+  border-radius: 21.314px;
+  width: 500px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.AmountLabel{
+    
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    line-height: normal;
+    display: flex;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.containerTwocurrencies
+{
+    display: flex;
+    gap: 60px;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+select {
+  
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+select :focus {
+  outline: none;
+}
+input :focus {
+  outline: none;
+}
+option {
+  color: #000;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+}
+button {
+  border-radius: 34.154px;
+  background: #0e98d0;
+  width: 400px;
+  height: 40px;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.basecurrancy {
+  border-radius: 35.238px;
+  border: 0.881px solid #c5c5c5;
+  background: #f9f9f9;
+  width: 170px;
+  height: 30px;
+  padding-left: 10px;
+  margin: 30px;
+}
+
+.compareButton {
+  margin: 50px;
+}

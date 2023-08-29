@@ -1,7 +1,7 @@
 ;
 import { FavouritsComponent } from './favourits/favourits.component';
 import { ConvertComponentComponent } from './convert.component/convert.component.component';
-import { CompareComponentComponent } from './compare.component/compare.component.component'import { NgModule } from '@angular/core';
+import { CompareComponentComponent } from './comparing/compare.component.component'import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import{}

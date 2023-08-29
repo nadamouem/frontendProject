@@ -1,0 +1,123 @@
+<div class="basecomponant">
+  <div class="container">
+    <div class="topbotton">
+      <button class="convertcomponant" (click)="onConvert()">
+        <p class="convertword">Convert</p>
+      </button>
+
+      <button class="compareecomponant" (click)="onCompare()">
+        <p class="compareword">Compare</p>
+      </button>
+    </div>
+    
+    
+      
+      <div *ngIf="status== 'compare'">
+        <div class="AmountLabel"><label for="Amount">Amount</label></div>
+        <input  id ="Amount"type="number" class="basecurrancy" [(ngModel)]="basiccurrancy"/>
+
+        
+        <label for="From"></label>
+      <p-dropdown  id="From"class="baseFlag"
+        
+        [options]="selectItems"
+        [(ngModel)]="selectedCurrancy"
+        optionLabel="currency"
+        placeholder="Select a Country"
+      >
+        <ng-template pTemplate="selectedItem">
+          <div class="flex align-items-center gap-2" *ngIf="selectedCurrancy">
+            <img
+              [src]="selectedCurrancy.flag"
+              [class]="'flag flag-' + selectedCurrancy.currency"
+              style="width: 18px"
+            />
+            <div>{{ selectedCurrancy.currency }}</div>
+          </div>
+        </ng-template>
+        <ng-template let-currency pTemplate="item">
+          <div class="flex align-items-center gap-2">
+            <img
+              [src]="currency.flag"
+              [class]="'flag flag-' + currency.currency"
+              style="width: 18px"
+            />
+            <div>{{ currency.currency }}</div>
+          </div>
+        </ng-template>
+      </p-dropdown>
+
+    <div class="containerTwocurrencies">
+        <div class="firtargetFlag">
+      <p-dropdown 
+        
+        [options]="selectItems"
+        [(ngModel)]="targetCurrancyOne"
+        optionLabel="currency"
+        placeholder="Select a Country"
+      >
+        <ng-template pTemplate="selectedItem">
+          <div class="flex align-items-center gap-2" *ngIf="targetCurrancyOne">
+            <img
+              [src]="targetCurrancyOne.flag"
+              [class]="'flag flag-' + targetCurrancyOne.currency"
+              style="width: 18px"
+            />
+            <div>{{ targetCurrancyOne.currency }}</div>
+          </div>
+        </ng-template>
+        <ng-template let-currency pTemplate="item">
+          <div class="flex align-items-center gap-2">
+            <img
+              [src]="currency.flag"
+              [class]="'flag flag-' + currency.currency"
+              style="width: 18px"
+            />
+            <div>{{ currency.currency }}</div>
+          </div>
+        </ng-template>
+      </p-dropdown>
+
+    </div>
+<div>
+      <p-dropdown 
+        class="basicflag"
+        [options]="selectItems"
+        [(ngModel)]="targetCurrancytwo"
+        optionLabel="currency"
+        placeholder="Select a Country"
+      >
+        <ng-template pTemplate="selectedItem">
+          <div class="flex align-items-center gap-2" *ngIf="targetCurrancytwo">
+            <img
+              [src]="targetCurrancytwo.flag"
+              [class]="'flag flag-' + targetCurrancytwo.currency"
+              style="width: 18px"
+            />
+            <div>{{ targetCurrancytwo.currency }}</div>
+          </div>
+        </ng-template>
+        <ng-template let-currency pTemplate="item">
+          <div class="flex align-items-center gap-2">
+            <img
+              [src]="currency.flag"
+              [class]="'flag flag-' + currency.currency"
+              style="width: 18px"
+            />
+            <div>{{ currency.currency }}</div>
+          </div>
+        </ng-template>
+      </p-dropdown>
+    </div>
+  </div>
+      <input type="number" class="basecurrancy" [(ngModel)]="resultTargetOne"/>
+      <input type="number" class="basecurrancy" [(ngModel)]="resultTargetTwo"/>
+      <div><button class="compareButton" (click)="getCompareData()">Compare</button></div>
+  </div>
+</div>
+    </div>
+  
+    
+
+
+  
