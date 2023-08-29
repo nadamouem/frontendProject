@@ -1,0 +1,126 @@
+<div class="background">
+  <div class="nav">
+    <span class="ConC-style">ConCurrency</span>
+  </div>
+  <div class="layout">
+    <div class="main-container">
+      <div class="form-container">
+        <div class="top-buttons">
+          <div class="active">
+
+            <div> Convert</div>
+          </div>
+         
+        <div>
+          <div>Compare</div>
+         </div>
+
+        </div>
+
+      
+        <div class="FORM">
+
+          <div class="amount">
+
+            <label for="amount" style="color: white; font-size: 15px;padding-bottom: 15px;">Amount</label>
+            <input class="small-rounded-input" type="number" />
+          </div>
+
+          <div class="from" >
+            <label for="from" style="color: white;padding-bottom: 15px">From</label>
+            <!--<input class="large-rounded-input" type="text" />-->
+            <select class="large-rounded-input"> 
+              <option *ngFor="let item of flagsdata" [value]="item.flag">
+                <img [src]="item.flag" alt="" height="20" width="20" />{{ item.currency}}
+              </option>
+            </select>
+           
+    
+           
+         
+          </div>
+        </div>
+
+
+        <div class="FORM">
+
+          <div class="amount">
+            <label for="amount" style="color: white; font-size: 15px;padding-bottom: 15px">To</label>
+            
+
+            <select class="large-rounded-input"> 
+              <option *ngFor="let item of flagsdata" [value]="item.flag">
+                <img [src]="item.flag" alt="" height="20" width="20" />{{ item.currency}}
+              </option>
+            </select>
+
+          </div>
+
+          <div class="from" >
+
+            <label for="from" style="color: white;padding-bottom: 15px">Amount</label>
+            <input class="small-rounded-input" type="text" />
+          </div>
+        </div>
+       
+
+        <div class="big-btn">
+          <button class="convert-btn">Convert</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+   
+ <!-- 
+  
+           >>>>>  Un clean Code <<<<<
+
+           
+  <div class="FORM">
+          <div class="from" style="display: flex; flex-direction: column">
+            <label for="to" style="color: white; padding-bottom: 20px"
+              >To</label
+            >
+            <input type="text" class="the-large-input" />
+          </div>
+
+          <div class="amount">
+            <label
+              for="amount"
+              style="color: white; padding-bottom: 20px; font-size: 15px"
+              >Amount</label
+            >
+            <input type="number" class="the-small-input" />
+          </div>
+        </div>
+      
+      
+      
+      -->
+
+
+                <!-- <select class="large-rounded-input">
+              <option *ngFor="let item of flagsdata">
+                <img [src]="item.flag">
+              {{item.currency}}
+               
+              </option>
+                
+           </select>
+          
+          <div class="custom-dropdown">
+      <button class="dropdown-toggle" (click)="toggleDropdown()">
+        Selected Item
+      </button>
+      <ul *ngIf="toggleDropdown" class="dropdown-menu">
+        <li *ngFor="let item of flagsdata">
+          <img [src]="item.flag" alt="" height="20" width="20" />
+          {{ item.currency}}
+        </li>
+      </ul>
+    </div>
+
+  -->
