@@ -1,57 +1,15 @@
 <div class="main-container">
 
-    <div class="header">
-        <h1 class="title">Live exchange rates</h1>
-<!-- 
-        <button type="button" class="btn-fav" (click)="showFav =true">
-            <img src="../assets/images/plus 1.png" alt=""/>
-            <span class="btn-text">add to favourits</span>
-          </button> -->
-    </div>
-    <h3>My portofoilo</h3>
-    <div class="card-dashboard">
-        <div class="item" *ngFor="let card of favCarrency">
-            <div class="LEFT">
-              <div class="img-country-currency">
-                <img [src]="card.flag" />
-                <div class="img-country">
-                  <p class="country">{{ card.currency }}</p>
-                  <br />
-                  <p class="currency">CURRENCY</p>
-                </div>
-              </div>
-            </div>
-            <div class="Right">
-              <p >{{ getRate(card.currency)| async}}</p>
-            </div>
-          </div>
-    </div>
+  <div class="header">
+    <h1 class="title">Live exchange rates</h1>
+  
+  </div>
+  <h3>My portofoilo</h3>
+  <div class="card-dashboard">
+    <app-rate-card *ngFor="let card of favCarrency" [cardData]="card">
+      <span>{{ card.currency | getRate | async | number:'1.0-2'}}</span>
+    </app-rate-card>
 
+  </div>
 
-
- 
-
-  <!-- <div class="container">
-    <div class="portofoilo-right">
-      <h2>My portofoilo</h2>
-
-      <div class="currency-dashboard">
-        <div class="item" *ngFor="let card of favCarrency">
-          <div class="LEFT">
-            <div class="img-country-currency">
-              <img [src]="card.flag" />
-              <div class="img-country">
-                <p class="country">{{ card.currency }}</p>
-                <br />
-                <p class="currency">CURRENCY</p>
-              </div>
-            </div>
-          </div>
-          <div class="Right">
-            <p class>2.5</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
 </div>

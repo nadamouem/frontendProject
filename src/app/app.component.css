@@ -1,44 +1,38 @@
-
-button
- {
-position: absolute; 
-display: flex;
-inset-inline-end: 35.6115px;
-/* align-items: center; */
-margin-block-start: min(50px, 5vh); 
-width: 300px;
-height: 60px;
-justify-content: center;
-align-items: center;
-gap: 18.926px;
-flex-shrink:0;
-border-radius: 37.852px;
-border: .893px solid #000;
-color: #363636;
-padding-left: 1.89px;
-padding-right: 1.89px;
-cursor: pointer;
-  }
-
-button img
- {
-  
-width: 35.96px;
-height: 35.96px;
-border-radius: 50%;
- }
- 
-.btn-text
-{
-    font-family: Poppins;
-    font-size: 22.711px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    color: #363636;
+button {
+  position: absolute;
+  display: flex;
+  inset-inline-end: 35.6115px;
+  /* align-items: center; */
+  margin-block-start: min(50px, 5vh);
+  width: 300px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  gap: 18.926px;
+  flex-shrink: 0;
+  border-radius: 37.852px;
+  border: 0.893px solid #000;
+  color: #363636;
+  padding-left: 1.89px;
+  padding-right: 1.89px;
+  cursor: pointer;
 }
-  
-      
+
+button img {
+  width: 35.96px;
+  height: 35.96px;
+  border-radius: 50%;
+}
+
+.btn-text {
+  font-family: Poppins;
+  font-size: 22.711px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #363636;
+}
+
 .l-container {
   width: 400px;
   padding: 1rem;

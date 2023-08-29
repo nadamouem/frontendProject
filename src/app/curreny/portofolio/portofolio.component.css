@@ -77,14 +77,7 @@ margin-block-start: 44px;
   gap: 28.115px;
 }
 
-.item {
-  display: flex;
 
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  border-bottom: 1px solid #b8b8b881;
-}
 .img-country-currency img:nth-child(1) {
   border-radius: 50%;
 }
