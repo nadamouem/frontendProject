@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, Output } from '@angular/core';
 import { CardsListStaticData } from './models/data.static';
 import { CurrencyCardModel, CurrencyFlag } from './models/data.model';
 import {ServiceService} from "./shared/service.service"
@@ -9,8 +9,8 @@ import {ServiceService} from "./shared/service.service"
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'gradProject';
-  showFav = false;
+  title = 'gradProject'
+ showFav = false;
   Currencies:CurrencyFlag[]=[];
   // call API and pass data
   staticCardsList = CardsListStaticData;

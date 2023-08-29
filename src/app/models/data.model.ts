@@ -11,3 +11,13 @@ export interface CurrencyFlag {
   flag: string;
   checked: boolean;
 }
+export interface rate {
+  baseCurrency:string,
+  targets:targets[]
+}
+
+export interface targets{
+      currency: string,
+      exchangeRate: string,
+      flag: string
+}

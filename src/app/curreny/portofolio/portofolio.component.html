@@ -2,13 +2,14 @@
 
     <div class="header">
         <h1 class="title">Live exchange rates</h1>
-
-        <button type="button" class="btn-fav" (click)="showFav=true">
-            <img src="../assets/images/plus 1.png"/>
+<!-- 
+        <button type="button" class="btn-fav" (click)="showFav =true">
+            <img src="../assets/images/plus 1.png" alt=""/>
             <span class="btn-text">add to favourits</span>
-          </button>
+          </button> -->
     </div>
-    <div class="body">
+    <h3>My portofoilo</h3>
+    <div class="card-dashboard">
         <div class="item" *ngFor="let card of favCarrency">
             <div class="LEFT">
               <div class="img-country-currency">
@@ -21,7 +22,7 @@
               </div>
             </div>
             <div class="Right">
-              <p class>2.5</p>
+              <p >{{ getRate(card.currency)| async}}</p>
             </div>
           </div>
     </div>

@@ -7,9 +7,11 @@ import {ServiceService} from "../shared/service.service"
   styleUrls: ['./favourits.component.css'],
 })
 export class FavouritsComponent implements OnInit{
- @Input() cardsList!: CurrencyFlag[];
-  @Output() closeFav = new EventEmitter<boolean>();
+
+ @Input() cardsList!: CurrencyFlag[];  
+ @Output() closeFav = new EventEmitter<boolean>();
   @Output() checkedItemChanges = new EventEmitter<CurrencyFlag[]>();
+
   checkedItem:CurrencyFlag[] =[];
   toggleFav(card: CurrencyFlag, cards:CurrencyFlag[]) {
     card.checked = !card.checked;
@@ -18,10 +20,11 @@ export class FavouritsComponent implements OnInit{
   }
   constructor(private service :ServiceService ){}
   ngOnInit() :void{
-    // this.service.getData().subscribe(respons=>{
-    //   this.cardsList = respons;
-    //   console.log(this.cardsList)
-    //   })
+  //   this.service.getData().subscribe(respons=>{
+  //     this.cardsList = respons;
+  //     console.log(this.cardsList)
+  //     })
+  // 
   }
   
   @Output() checkedCurrenciesChange = new EventEmitter<string[]>();

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import{ HttpClient} from '@angular/common/http';
-import { CurrencyFlag } from '../models/data.model';
+import { CurrencyFlag, rate } from '../models/data.model';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 
@@ -17,6 +17,13 @@ export class ServiceService {
   .get<CurrencyFlag[]>('https://currencyexchange-wbtr.onrender.com/images')
   
 }
+
+
+
+public getrate(target:string){
+  return this.http
+  .get<rate>(`https://currencyexchange-wbtr.onrender.com/rates?baseCode=USD&targets=${target}`)
+}
 private currenciesSubject = new BehaviorSubject<CurrencyFlag[]>([]);
   currencies$: Observable<CurrencyFlag[]> = this.currenciesSubject.asObservable();
 
@@ -26,4 +33,5 @@ private currenciesSubject = new BehaviorSubject<CurrencyFlag[]>([]);
     const currencies = JSON.parse(localStorage.getItem('currencies') || '[]');
     this.currenciesSubject.next(currencies);
   }
+
 }
